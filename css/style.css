@@ -94,8 +94,17 @@ a{
 
 #img5{
     position: relative;
-    width: 450px;
-    height: 500px;
+    width: 350px;
+    height: 400px;
+    margin-right: 300px;
+}
+
+#snippet1{
+    position: relative;
+    float: right;
+    bottom: 390px;
+    width: 300px;
+    height: auto;
 }
 
 #img6{
@@ -109,15 +118,42 @@ a{
 
 #img8{
     position: relative;
-    width: 700px;
-    height: 400px;
+    width: 350px;
+    height: 200px;
+    margin-right: 300px;
+}
+
+#snippet2{
+    position: relative;
+    float: right;
+    bottom: 50px;
+    width: 450px;
+    height: 350px;
+}
+
+#img10{
+    position: relative;
+    right: 230px;
+    top: 100px;
+}
+
+#snippet3{
+    position: relative;
+    float: right;
+    left: 30px;
+    bottom: 400px;
+    width: 500px;
+    height: auto;
 }
 
 #img12{
     position: relative;
     width: 400px;
     height: 250px;
-    bottom: 20px;
+}
+
+#fourteenth{
+    font-size: 26px;
 }
 
 #img13{

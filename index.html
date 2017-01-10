@@ -23,11 +23,13 @@
 	    </div>
 
 		<div id="first" class="step slide redslide" data-x="-2000" data-y="1500" data-rotate="220">
-	        <center><b><h2>Programming Languages</h2></b></center>
+	        <center><b><h1>Programming Languages</h1></b></center>
 	        <br/>
-	        <center><p>What is programming</p></center>
-	        <center><p>Classifications of programming languages</p></center>
-	        <center><p>Types of programming languages</p></center>
+	        <ul>
+	        	<li>What is programming</li>
+	        	<li>Classifications of programming languages</li>
+	        	<li>Types of programming languages</li>
+	        </ul>
 
 	        <a href="#end"><p id="backtop">Back to top</p></a><p class="pagenum">Slide 1</p>
 	    </div>
@@ -96,6 +98,7 @@
 	    	<h4>Example of procedural language</h4>
 	    	<div id="imgWrapper">
 	        	<center><img id="img5" src="images/img5.png" alt="C++"/></center>
+	        	<img id="snippet1" src="images/procedural.jpg" alt="ProceduralSnippet"/>
 	        </div>
 	    </div>
 
@@ -117,9 +120,9 @@
 	    <div id="ninth" class="step slide greenslide" data-x="500" data-y="-520" data-rotate="300">
 	    	<h4>Advantages of OOP</h4>
 	        <ul>
-	        	<li>Clear modular structure which makes it easier to define abstract data types and hide the implementation details.</li>
+	        	<li>Clear modular (separated into 'containers') structure which makes it easier to define abstract data types and hide the implementation details. (Creating your own way of manipulating data e.g. a custom array or arraylist).</li>
 				<li>Easier to fix and maintain code because new objects with small differences can be created quickly.</li>
-				<li>OOP is easily adaptable to other software components e.g. when building a graphical user interface (GUI)</li>
+				<li>OOP is easily adaptable to other software components e.g. when building a graphical user interface (GUI).</li>
 	        </ul>
 	        <div id="imgWrapper">
 	        	<img id="img7" src="images/img7.png" alt="OOPAdvantages"/>
@@ -132,6 +135,7 @@
 	    	<h4>Example of OOP language</h4>
 	    	<div id="imgWrapper">
 	        	<center><img id="img8" src="images/img8.png" alt="Java"/></center>
+	        	<img id="snippet2" src="images/objectoriented.jpg" alt="ProceduralSnippet"/>
 	        </div>
 	    </div>
 
@@ -148,6 +152,7 @@
 	    	<h4>Example of a scripting language</h4>
 	    	<div id="imgWrapper">
 	        	<center><img id="img10" src="images/img10.png" alt="Python"/></center>
+	        	<img id="snippet3" src="images/javapython.png" alt="JavaPython">
 	        </div>
 	    </div>
 
@@ -166,9 +171,9 @@
 	    <div id="fourteenth" class="step slide blueslide" data-x="2750" data-y="820" data-rotate="140">
 	    	<h4>Types of markup</h4>
 	    	<ul>
-	    		<li>Presentational Markup: Used by traditional word processing systems with WYSIWYG.</li>
-	    		<li>Procedural Markup: Integrated with text to provide text processing instructions to programs.</li>
-	    		<li>Descriptive Markup: Used to label parts of a document as to how they should be treated e.g. 'cite' and 'caption' tags.</li>
+	    		<li>Presentational Markup: Used by traditional word processing systems with WYSIWYG e.g. "p", "b" tags.</li>
+	    		<li>Procedural/Structural Markup: Integrated with text to provide text processing instructions to programs. e.g. "ul" tag.</li>
+	    		<li>Descriptive/Semantic Markup: Used to label parts of a document as to how they should be treated e.g. "cite" and "caption" tags.</li>
 	    	</ul>
 	    	<div id="imgWrapper">
 	        	<center><img id="img12" src="images/img12.jpg" alt="HTMLCSS"/></center>
@@ -213,8 +218,6 @@
 
 	</div>
 
-</body>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="impress-js-master/js/impress.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
@@ -232,7 +235,7 @@ $(document).ready(function (){
 
 	var img1 = document.getElementById("img1");
 	var img2 = document.getElementById("img2");
-	var img3 = document.getElementById("img3")
+	var img3 = document.getElementById("img3");
 	var img4 = document.getElementById("img4");
 	var img5 = document.getElementById("img5");
 	var img6 = document.getElementById("img6");
@@ -242,48 +245,48 @@ $(document).ready(function (){
 	var img11 = document.getElementById("img11");
 	var img12 = document.getElementById("img12");
 
-	var tweenSlideTwo = new TimelineLite();
+	var tweenSlideTwo = new TimelineLite({paused:true});
 		tweenSlideTwo.from(img1, 0.3, {alpha:0})
-					.to(img1, 2, {left:"25%", ease:Bounce.easeOut});
+					.to(img1, 2, {left:'25%', ease:Bounce.easeOut});
 
-	var tweenSlideThree = TweenLite.to(img2, 2, {rotation: 360});
+	var tweenSlideThree = TweenLite.to(img2, 2, {paused:true, rotation: 360});
 
-	var tweenSlideFour = new TimelineLite();
+	var tweenSlideFour = new TimelineLite({paused:true});
         tweenSlideFour.from(img3, 0.3, {alpha:1})
                     .to(img3, 0.5, {skewX:45})
                     .to(img3, 0.8, {skewX:-45})
                     .to(img3, 0.5, {skewX:0, skewY:0});
 
-    var tweenSlideSix = new TimelineLite();        
-        tweenSlideSix.from(img4, 1.5, {opacity:0, rotation:"-90deg", ease:Back.easeOut})
+    var tweenSlideSix = new TimelineLite({paused:true});        
+        tweenSlideSix.from(img4, 1.5, {opacity:0, rotation:'-90deg', ease:Back.easeOut})
                        .to(img4, 1, {opacity:1, rotation:"0deg", ease:Back.easeOut});
 
-	var tweenSlideSeven = new TimelineLite();        
+	var tweenSlideSeven = new TimelineLite({paused:true});        
         tweenSlideSeven.to(img5, 0.5, {opacity:0, scale: 0.5, yoyo: true})
                        .to(img5, 0.5, {opacity:1, scale:1, yoyo: true});
 
-	var tweenSlideEight = new TimelineLite();
+	var tweenSlideEight = new TimelineLite({paused:true});
 		tweenSlideEight.from(img6, 0.5, {alpha:0})
-					.to(img6, 1, {left:"20%", ease:Elastic.easeIn});
+					.to(img6, 1, {left:'20%', ease:Elastic.easeIn});
 
-	var tweenSlideNine = new TimelineLite();
-		tweenSlideNine.from(img7, 1, {alpha:0, left:"50%", ease:Back.easeOut})
-					.to(img7, 1, {alpha:1, left:"15%", ease:Power1.easeOut});
+	var tweenSlideNine = new TimelineLite({paused:true});
+		tweenSlideNine.from(img7, 1, {alpha:0, left:'50%', ease:Back.easeOut})
+					.to(img7, 1, {alpha:1, left:'15%', ease:Power1.easeOut});
 
-	var tweenSlideTen = new TimelineLite();
+	var tweenSlideTen = new TimelineLite({paused:true});
 		tweenSlideTen.from(img8, 0.5, {opacity:0, scale:2})
-					 .to(img8, 1, {opacity:1, rotation:"720deg", ease:Power2.easeOut});
+					 .to(img8, 1, {opacity:1, rotation:'720deg', ease:Power2.easeOut});
 
-	var tweenSlideEleven = new TimelineLite();
-		tweenSlideEleven.from(img10, 1, {opacity:1, rotation:"180deg", ease:Back.easeOut})
+	var tweenSlideEleven = new TimelineLite({paused:true});
+		tweenSlideEleven.from(img10, 1, {opacity:1, rotation:'180deg', ease:Back.easeOut})
 						.from(img10, 1, {opacity:1, scale:2});
 
-	var tweenSlideTwelve = new TimelineLite(); 
+	var tweenSlideTwelve = new TimelineLite({paused:true}); 
 		tweenSlideTwelve.to(img11, 0.3, {skewX:45, skewY:45})
 						.to(img11, 0.3, {skewX:0, skewY:0});
 
-	var tweenSlideThirteen = new TimelineLite(); 
-		tweenSlideThirteen.from(img12, 1, {rotationY:"-270deg", top:100, transformOrigin: "50% 50% -80"});
+	var tweenSlideThirteen = new TimelineLite({paused:true}); 
+		tweenSlideThirteen.from(img12, 1, {rotationY:'-270deg', top:100, transformOrigin: '50% 50% -80'});
 
 	$(document).on('impress:stepenter', function(e) {
         var currentSlide = $(e.target).attr('id');
@@ -308,5 +311,7 @@ $(document).ready(function (){
 });
 
 </script>
+
+</body>
 
 </html>
