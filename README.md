@@ -6,6 +6,6 @@ N.B. Unfortunately only works in Chrome browser. The combination of impress.js w
 
 Cheers
 
-# Run application
+# To run the application...
 
 Just download the folder and open the index.html file in CHROME browser
