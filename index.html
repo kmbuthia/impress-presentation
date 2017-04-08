@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="utf-8">
 
 <head>
 	<title>Programming Languages | Presentation</title>
@@ -257,9 +258,9 @@ $(document).ready(function (){
                     .to(img3, 0.8, {skewX:-45})
                     .to(img3, 0.5, {skewX:0, skewY:0});
 
-    var tweenSlideSix = new TimelineLite({paused:true});        
+    var tweenSlideSix = new TimelineLite({paused:true});
         tweenSlideSix.from(img4, 1.5, {opacity:0, rotation:'-90deg', ease:Back.easeOut})
-                       .to(img4, 1, {opacity:1, rotation:"0deg", ease:Back.easeOut});
+					.to(img4, 1, {opacity:1, rotation:'0deg', ease:Back.easeOut});
 
 	var tweenSlideSeven = new TimelineLite({paused:true});        
         tweenSlideSeven.to(img5, 0.5, {opacity:0, scale: 0.5, yoyo: true})
