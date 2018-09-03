@@ -10,4 +10,4 @@ Cheers
 
 Just download the folder and open the index.html file in CHROME browser
 
-UPDATE: You can now view it online as well here: http://hengasystems.com/demos/impress-presentation
+UPDATE: You can now view it online as well here: http://impressdemo.hengasystems.com/
